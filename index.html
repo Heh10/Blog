@@ -55,8 +55,9 @@
 			<li><a href="setting.html"><span class="glyphicon glyphicon-pencil"></span> 设置</a></li>
 			<li><a href="panels.html"><span class="glyphicon glyphicon-info-sign"></span> Alerts &amp; Panels</a></li>
 			<li class="parent ">
-				<a href="#">
-					<span class="glyphicon glyphicon-list"></span> Dropdown <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
+				<a data-toggle="collapse" href="#sub-item-1">
+					<span class="glyphicon glyphicon-list"></span> Dropdown
+                    <span class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span>
 				</a>
 				<ul class="children collapse" id="sub-item-1">
 					<li>
@@ -265,8 +266,8 @@
 		});
 
 		!function ($) {
-		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
-		        $(this).find('em:first').toggleClass("glyphicon-minus");      
+		    $(document).on("click","ul.nav li.parent > a", function(){
+		        $(this).find('em:first').toggleClass("glyphicon-minus");
 		    }); 
 		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
 		}(window.jQuery);
